@@ -1,0 +1,39 @@
+repo_dir = "src"
+chunk_size_bytes = 1000000
+default_publish_decision = "reject"
+default_attachment_policy = "metadata_only"
+
+[sources.lmstudio]
+# roots auto-detected to ~/.lmstudio/conversations/
+
+[sources.vscode]
+# roots auto-detected per platform for Code and Code - Insiders
+
+[sources.pi_coding_agent]
+# roots auto-detected to ~/.pi/agent
+
+[sources.opencode]
+# roots auto-detected to XDG data storage (usually ~/.local/share/opencode/storage)
+
+[sources.oterm]
+# roots auto-detected to app data storage (contains store.db)
+
+[sources.ollama]
+# roots auto-detected to ~/.ollama (reads prompt history)
+
+[sources.codex]
+# roots auto-detected to ~/.codex/sessions
+
+[sources.claude_code]
+# roots auto-detected to ~/.claude/projects
+
+# Uncomment and set roots only when using the generic local adapter.
+#[sources.local]
+#roots = ["./imports"]
+#patterns = ["**/*.json", "**/*.jsonl"]
+
+[hugging_face]
+enabled = false
+repo_id = ""
+token_env_var = "HUGGING_FACE_TOKEN"
+revision = "main"
